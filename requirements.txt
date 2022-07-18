@@ -1,9 +1,0 @@
-requests
-bs4 
-requests
-urllib3
-requests_html 
-streamlit 
-torch
-transformers
-os
