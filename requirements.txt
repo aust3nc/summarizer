@@ -1,0 +1,9 @@
+requests
+bs4 
+requests
+urllib
+requests_html 
+streamlit 
+torch
+transformers
+os
