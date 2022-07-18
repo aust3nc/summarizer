@@ -5,7 +5,6 @@ import requests
 import urllib
 from requests_html import HTMLSession
 import streamlit as st
-import matplotlib.pyplot as plt
 
 @st.cache
 class s:
