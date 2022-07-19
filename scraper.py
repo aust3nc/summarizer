@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import requests
 import urllib
-from requests_html import HTMLSession
+from requests import HTMLSession
 import streamlit as st
 
 @st.cache
