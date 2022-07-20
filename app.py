@@ -24,7 +24,7 @@ class a():
         #radio button for URL/Query
         choice = st.radio(
             "What would you like to scrape? ",
-            ('URL', 'Query'))
+            ('URL', 'Query', 'Raw Text'))
         #if URL is selected, display text input for URL
         if choice == 'URL':
             url = st.text_input('URL:', help='Enter the URL and press Enter/Return')
@@ -38,7 +38,7 @@ class a():
                 with st.spinner(text="Summarizing text..."): 
                     response = b(urlText, 4, 1.5, 250, 250, 2)
                     st.text_area(label = "Summary", value = response)
-        else:
+        elif choice == 'Query':
             #if Query is selected, display text input for query
             query = st.text_input("Query: ", help='Enter the search string and press Enter/Return')
             urlCount = st.number_input("How many results would you like to scrape?", 1, 25, 5, 1)
@@ -58,6 +58,13 @@ class a():
                     with st.spinner(text="Summarizing text..."):
                         response = b(queryText, 4, 1.5, 250, 250, 2)
                         st.text_area(label = "Summary", value = response)
+        else:
+            #if Raw Text is selected, display text input for raw text
+            rawText = st.text_area("Raw Text: ", help='Enter the text and press Enter/Return')
+            if rawText:
+                with st.spinner(text="Summarizing text..."): 
+                    response = b(rawText, 4, 1.5, 250, 250, 2)
+                    st.text_area(label = "Summary", value = response)
 
 def main():
     A = a()
